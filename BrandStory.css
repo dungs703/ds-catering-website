@@ -1,0 +1,40 @@
+.brand-story {
+  background: var(--charcoal);
+  padding: 80px 0 120px;
+}
+
+.brand-story__title {
+  margin-top: 16px;
+  font-size: clamp(2.2rem, 6vw, 4.6rem);
+  color: var(--cream);
+  margin-bottom: 56px;
+}
+
+.brand-story__title-line {
+  display: block;
+}
+
+.brand-story__title-line:nth-child(2) {
+  color: var(--cheddar);
+}
+
+.brand-story__body {
+  display: grid;
+  gap: 34px;
+  max-width: 780px;
+  margin-left: auto;
+}
+
+.brand-story__para {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 2.4vw, 1.7rem);
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--cream);
+}
+
+@media (max-width: 720px) {
+  .brand-story__body {
+    margin-left: 0;
+  }
+}

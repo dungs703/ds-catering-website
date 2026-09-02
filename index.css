@@ -1,0 +1,129 @@
+/* ---------------------------------------------------------
+   THE MAC FACTORY — Design Tokens
+   Signatur-Element: der "Cheese Pull" — ein sich beim Scrollen
+   dehnender/tropfender Käsefaden, der als Section-Divider und
+   Scroll-Progress-Indikator dient.
+--------------------------------------------------------- */
+:root {
+  --cheddar: #f0a202;
+  --cheddar-light: #ffc94a;
+  --charcoal: #17120d;
+  --charcoal-soft: #241b13;
+  --cream: #fbf3e4;
+  --crust: #c4491b;
+  --sauce: #8c2a1c;
+
+  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-mono: "Space Mono", monospace;
+
+  --container: min(1200px, 92vw);
+  --radius: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--charcoal);
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: var(--charcoal);
+  color: var(--cream);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: var(--cheddar);
+}
+
+.container {
+  width: var(--container);
+  margin: 0 auto;
+}
+
+.placeholder-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(240, 162, 2, 0.14);
+  border: 1px dashed var(--cheddar);
+  color: var(--cheddar-light);
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--cream);
+  color: var(--charcoal);
+  padding: 10px 16px;
+  z-index: 1000;
+}
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--cheddar);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: var(--cheddar);
+  color: var(--charcoal);
+}
